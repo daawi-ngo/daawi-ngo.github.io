@@ -600,6 +600,76 @@ figure.wp-block-gallery {
   font-size: 14px;
 }
 
+/* Enhanced Modal Close Button - Red X */
+.modal .btn-close {
+  opacity: 1;
+  filter: none; /* Remove the invert filter */
+  background-color: rgba(220, 53, 69, 0.9); /* Red background */
+  padding: 8px;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  position: relative;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  
+  /* Create a clear X mark */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Add a clearer X with ::before and ::after */
+.modal .btn-close::before,
+.modal .btn-close::after {
+  content: '';
+  position: absolute;
+  width: 18px;
+  height: 2px;
+  background-color: white;
+}
+
+.modal .btn-close::before {
+  transform: rotate(45deg);
+}
+
+.modal .btn-close::after {
+  transform: rotate(-45deg);
+}
+
+.modal .btn-close:hover {
+  background-color: rgba(220, 53, 69, 1); /* Brighter red on hover */
+  transform: scale(1.1);
+}
+
+/* Make sure the button appears correctly */
+.modal-header {
+  position: relative;
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Add a tooltip on hover */
+.modal .btn-close span {
+  position: absolute;
+  top: -30px;
+  right: -5px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.modal .btn-close:hover span {
+  opacity: 1;
+}
+
 .wp-block-media-text,
 .wp-block-media-text.alignwide,
 figure.wp-block-gallery {
