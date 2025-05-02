@@ -382,7 +382,6 @@ Donation Area
             </div>
         </div>
     </section>
-
 <!--==============================
     Events Area  
     ==============================-->
@@ -433,6 +432,13 @@ Donation Area
                                 <p><i class="far fa-map-marker-alt me-2"></i>Conscious Kitchen, The Hague</p>
                             </div>
                             <p class="mb-4">Our successful collaboration with Conscious Kitchen raised essential funds for humanitarian aid in Gaza. Participants enjoyed conscious dining while supporting a vital cause.</p>
+                            <h5 class="impact-title"><i class="fas fa-heart text-danger"></i> Impact</h5>
+                            <p>Through this event, we raised €1,006 for medical aid in Gaza. Like trees in a forest sharing nutrients through their roots, our community extended support to those who need it most. Every meal shared became a source of strength for families facing challenging circumstances.</p>
+                            <div class="text-center mt-3">
+                                <a href="#" class="btn-view-gallery" data-bs-toggle="modal" data-bs-target="#gazaModal">
+                                    <i class="fas fa-images me-2"></i>View Event Gallery
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -457,6 +463,13 @@ Donation Area
                                 <p><i class="far fa-map-marker-alt me-2"></i>Bonobo, The Hague</p>
                             </div>
                             <p class="mb-4">A collaborative event with Bonobo where we gathered in solidarity to raise awareness and funds for humanitarian efforts in Palestine. The community came together for this important cause.</p>
+                            <h5 class="impact-title"><i class="fas fa-heart text-danger"></i> Impact</h5>
+                            <p>Thanks to your generous donations, we raised €954 and were able to provide food packages for 25 families in Gaza during Ramadan. Through your support, our shared meal extended beyond borders—until we can sit together in person, we've found a way to eat together from afar. We feel each other's pain and give as we would like to be given.</p>
+                            <div class="text-center mt-3">
+                                <a href="#" class="btn-view-gallery" data-bs-toggle="modal" data-bs-target="#palestineModal">
+                                    <i class="fas fa-images me-2"></i>View Event Gallery
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -475,16 +488,26 @@ Donation Area
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
+                    <div class="impact-statement mb-4">
+                        <h4>Impact</h4>
+                        <p>Through this event, we raised €1,050 for medical aid in Gaza. Like trees in a forest sharing nutrients through their roots, our community extended support to those who need it most. Every meal shared became a source of strength for families facing challenging circumstances.</p>
+                    </div>
                     <div class="gallery-container">
                         <!-- Replace these with actual images from your event -->
                         <div class="gallery-item">
-                            <img src="assets/img/gallery/gaza-event-1.jpg" alt="Gaza Fundraiser Event">
+                            <img src="assets/img/gallery/gaza-event-1.jpeg" alt="Gaza Fundraiser Event">
                         </div>
                         <div class="gallery-item">
-                            <img src="assets/img/gallery/gaza-event-2.jpg" alt="Gaza Fundraiser Event">
+                            <img src="assets/img/gallery/gaza-event-2.jpeg" alt="Gaza Fundraiser Event">
                         </div>
                         <div class="gallery-item">
-                            <img src="assets/img/gallery/gaza-event-3.jpg" alt="Gaza Fundraiser Event">
+                            <img src="assets/img/gallery/gaza-event-3.jpeg" alt="Gaza Fundraiser Event">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="assets/img/gallery/gaza-event-4.jpeg" alt="Gaza Fundraiser Event">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="assets/img/gallery/palestine-event-8.jpeg" alt="Gaza Fundraiser Event">
                         </div>
                         <!-- Add more images as needed -->
                     </div>
@@ -502,16 +525,32 @@ Donation Area
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
+                    <div class="impact-statement mb-4">
+                        <h4>Impact</h4>
+                        <p>Thanks to your generous donations, we raised €1,000 and were able to provide food packages for 25 families in Gaza during Ramadan. Through your support, our shared meal extended beyond borders—until we can sit together in person, we've found a way to eat together from afar. We feel each other's pain and give as we would like to be given.</p>
+                    </div>
                     <div class="gallery-container">
                         <!-- Replace these with actual images from your event -->
                         <div class="gallery-item">
-                            <img src="assets/img/gallery/palestine-event-1.jpg" alt="Free Palestine Event">
+                            <img src="assets/img/gallery/palestine-event-1.jpeg" alt="Free Palestine Event">
                         </div>
                         <div class="gallery-item">
-                            <img src="assets/img/gallery/palestine-event-2.jpg" alt="Free Palestine Event">
+                            <img src="assets/img/gallery/palestine-event-2.jpeg" alt="Free Palestine Event">
                         </div>
                         <div class="gallery-item">
-                            <img src="assets/img/gallery/palestine-event-3.jpg" alt="Free Palestine Event">
+                            <img src="assets/img/gallery/palestine-event-3.jpeg" alt="Free Palestine Event">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="assets/img/gallery/palestine-event-4.jpeg" alt="Free Palestine Event">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="assets/img/gallery/palestine-event-5.jpeg" alt="Free Palestine Event">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="assets/img/gallery/palestine-event-6.jpeg" alt="Free Palestine Event">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="assets/img/gallery/palestine-event-7.jpeg" alt="Free Palestine Event">
                         </div>
                         <!-- Add more images as needed -->
                     </div>
@@ -540,6 +579,7 @@ Donation Area
         height: 280px;
         overflow: hidden;
         position: relative;
+        cursor: pointer; /* Add cursor pointer to indicate clickable */
     }
     
     .event-img img {
@@ -592,6 +632,23 @@ Donation Area
         transform: scale(1.05);
     }
     
+    /* View Gallery button */
+    .btn-view-gallery {
+        display: inline-block;
+        padding: 8px 15px;
+        background-color: rgba(26, 104, 91, 0.1);
+        color: var(--theme-color);
+        border-radius: 30px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        text-decoration: none;
+    }
+    
+    .btn-view-gallery:hover {
+        background-color: var(--theme-color);
+        color: white;
+    }
+    
     /* Special styling for the Free Palestine event */
     .palestine-event .event-img {
         height: 480px;
@@ -620,6 +677,30 @@ Donation Area
     
     .event-meta i {
         color: var(--theme-color);
+    }
+    
+    /* Impact styling */
+    .impact-title {
+        margin-top: 20px;
+        font-weight: 600;
+        color: var(--theme-color);
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+    
+    .impact-statement {
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 10px;
+        border-left: 4px solid var(--theme-color);
+        box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    }
+    
+    .impact-statement h4 {
+        color: var(--theme-color);
+        margin-bottom: 10px;
+        font-weight: 600;
     }
     
     /* Gallery styling */
@@ -706,6 +787,7 @@ Donation Area
         }
     }
     </style>
+
     <!--==============================
     Contact Area  
     ==============================-->
