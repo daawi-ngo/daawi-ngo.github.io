@@ -532,54 +532,81 @@ Donation Area
     </div>
 </div>
     
-    <!-- Modal for Free Palestine Gallery -->
-    <div class="modal fade" id="palestineModal" tabindex="-1" aria-labelledby="palestineModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-xl">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="palestineModalLabel">Free Palestine x Bonobo Gallery</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+<!-- Modal for Free Palestine Gallery -->
+<div class="modal fade" id="palestineModal" tabindex="-1" aria-labelledby="palestineModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="palestineModalLabel">Free Palestine x Bonobo Gallery</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+               
+                <div class="gallery-container">
+                    <div class="gallery-item">
+                        <img src="assets/img/gallery/palestine-event-10.jpeg" alt="Free Palestine Event">
+                    </div> 
+                    <div class="gallery-item">
+                        <img src="assets/img/gallery/palestine-event-11.jpeg" alt="Free Palestine Event">
+                    </div> 
+                    <div class="gallery-item">
+                        <img src="assets/img/gallery/palestine-event-12.jpeg" alt="Free Palestine Event">
+                    </div> 
                 </div>
-                <div class="modal-body">
-                   
-                    <div class="gallery-container">
-                        
-                        <div class="gallery-item">
-                            <img src="assets/img/gallery/palestine-event-10.jpeg" alt="Free Palestine Event">
-                        </div> 
-                        <div class="gallery-item">
-                            <img src="assets/img/gallery/palestine-event-11.jpeg" alt="Free Palestine Event">
-                        </div> 
-                        <div class="gallery-item">
-                            <img src="assets/img/gallery/palestine-event-12.jpeg" alt="Free Palestine Event">
-                        </div> 
+                
+<!-- Video Player instead of Instagram Embed -->
+<div class="video-container mt-4 mb-4">
+    <video controls class="event-video">
+        <source src="assets/img/gallery/palestine-event-13.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</div>
+                <div class="impact-statement mb-4">
+                    <h4>Impact</h4>
+                    <p>Thanks to your generous donations, we raised €954 and were able to provide food packages for 25 families in Gaza during Ramadan. Through your support, our shared meal extended beyond borders—until we can sit together in person, we've found a way to eat together from afar. We feel each other's pain and give as we would like to be given.</p>
+                </div>
+                <div class="gallery-container">
+                    <div class="gallery-item">
+                        <img src="assets/img/gallery/palestine-event-1.jpeg" alt="Free Palestine Event">
                     </div>
-                    <div class="impact-statement mb-4">
-                        <h4>Impact</h4>
-                        <p>Thanks to your generous donations, we raised €1,000 and were able to provide food packages for 25 families in Gaza during Ramadan. Through your support, our shared meal extended beyond borders—until we can sit together in person, we've found a way to eat together from afar. We feel each other's pain and give as we would like to be given.</p>
+                    <div class="gallery-item">
+                        <img src="assets/img/gallery/palestine-event-2.jpeg" alt="Free Palestine Event">
                     </div>
-                    <div class="gallery-container">
-                        <div class="gallery-item">
-                            <img src="assets/img/gallery/palestine-event-1.jpeg" alt="Free Palestine Event">
-                        </div>
-                        <div class="gallery-item">
-                            <img src="assets/img/gallery/palestine-event-2.jpeg" alt="Free Palestine Event">
-                        </div>
-                        <div class="gallery-item">
-                            <img src="assets/img/gallery/palestine-event-3.jpeg" alt="Free Palestine Event">
-                        </div>
-                        <div class="gallery-item">
-                            <img src="assets/img/gallery/palestine-event-16.jpeg" alt="Free Palestine Event">
-                        </div>
-                       
-                        <!-- Add more images as needed -->
+                    <div class="gallery-item">
+                        <img src="assets/img/gallery/palestine-event-3.jpeg" alt="Free Palestine Event">
                     </div>
+                    <div class="gallery-item">
+                        <img src="assets/img/gallery/palestine-event-16.jpeg" alt="Free Palestine Event">
+                    </div>
+                    <!-- Add more images as needed -->
                 </div>
             </div>
         </div>
     </div>
+</div>
     
     <style>
+        /* Instagram Video Container styling */
+/* Video player styling */
+.video-container {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.event-video {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+@media (max-width: 767px) {
+    .instagram-video {
+        height: 400px;
+    }
+}
+
     /* Event cards styling */
     .event-card {
         height: 100%;
