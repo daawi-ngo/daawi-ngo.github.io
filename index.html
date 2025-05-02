@@ -396,9 +396,13 @@ Donation Area
             <div class="row justify-content-center" style="margin-top: 50px;">
                 <!-- First row -->
                 <div class="col-lg-5 col-md-6 mb-5 mx-auto mx-lg-3">
-                    <div class="event-card">
+                    <div class="event-card upcoming-event">
+                        <!-- No clickable gallery for upcoming event -->
                         <div class="event-img">
                             <img src="assets/img/events/daawi-event2.png" alt="Dinner for Sudan event">
+                            <div class="event-overlay upcoming">
+                                <span><i class="fas fa-calendar-alt"></i> Upcoming Event</span>
+                            </div>
                         </div>
                         <div class="event-content">
                             <h3 class="event-title mb-3">Dinner for Sudan</h3>
@@ -414,9 +418,14 @@ Donation Area
                 
                 <div class="col-lg-5 col-md-6 mb-5 mx-auto mx-lg-3">
                     <div class="event-card">
-                        <div class="event-img">
-                            <img src="assets/img/events/daawi-event1.png" alt="Gaza Fundraiser x Conscious Kitchen">
-                        </div>
+                        <a href="#" class="event-link" data-bs-toggle="modal" data-bs-target="#gazaModal">
+                            <div class="event-img">
+                                <img src="assets/img/events/daawi-event1.png" alt="Gaza Fundraiser x Conscious Kitchen">
+                                <div class="event-overlay">
+                                    <span><i class="fas fa-images"></i> View Gallery</span>
+                                </div>
+                            </div>
+                        </a>
                         <div class="event-content">
                             <h3 class="event-title mb-3">Gaza Fundraiser x Conscious Kitchen</h3>
                             <div class="event-meta mb-3">
@@ -433,9 +442,14 @@ Donation Area
             <div class="row justify-content-center">
                 <div class="col-lg-6 col-md-8 mb-5">
                     <div class="event-card palestine-event">
-                        <div class="event-img">
-                            <img src="assets/img/events/free-palestine-poster.png" alt="Free Palestine Event">
-                        </div>
+                        <a href="#" class="event-link" data-bs-toggle="modal" data-bs-target="#palestineModal">
+                            <div class="event-img">
+                                <img src="assets/img/events/free-palestine-poster.png" alt="Free Palestine Event">
+                                <div class="event-overlay">
+                                    <span><i class="fas fa-images"></i> View Gallery</span>
+                                </div>
+                            </div>
+                        </a>
                         <div class="event-content">
                             <h3 class="event-title mb-3">Free Palestine x Bonobo</h3>
                             <div class="event-meta mb-3">
@@ -450,6 +464,62 @@ Donation Area
         </div>
     </section>
     
+    <!-- No modal for Dinner for Sudan since it's an upcoming event -->
+    
+    <!-- Modal for Gaza Fundraiser Gallery -->
+    <div class="modal fade" id="gazaModal" tabindex="-1" aria-labelledby="gazaModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="gazaModalLabel">Gaza Fundraiser Gallery</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="gallery-container">
+                        <!-- Replace these with actual images from your event -->
+                        <div class="gallery-item">
+                            <img src="assets/img/gallery/gaza-event-1.jpg" alt="Gaza Fundraiser Event">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="assets/img/gallery/gaza-event-2.jpg" alt="Gaza Fundraiser Event">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="assets/img/gallery/gaza-event-3.jpg" alt="Gaza Fundraiser Event">
+                        </div>
+                        <!-- Add more images as needed -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Modal for Free Palestine Gallery -->
+    <div class="modal fade" id="palestineModal" tabindex="-1" aria-labelledby="palestineModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="palestineModalLabel">Free Palestine x Bonobo Gallery</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="gallery-container">
+                        <!-- Replace these with actual images from your event -->
+                        <div class="gallery-item">
+                            <img src="assets/img/gallery/palestine-event-1.jpg" alt="Free Palestine Event">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="assets/img/gallery/palestine-event-2.jpg" alt="Free Palestine Event">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="assets/img/gallery/palestine-event-3.jpg" alt="Free Palestine Event">
+                        </div>
+                        <!-- Add more images as needed -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
     <style>
     /* Event cards styling */
     .event-card {
@@ -460,6 +530,10 @@ Donation Area
         background-color: #fff;
         transition: transform 0.3s ease;
         max-width: 100%;
+    }
+    
+    .event-card:hover {
+        transform: translateY(-5px);
     }
     
     .event-img {
@@ -473,6 +547,49 @@ Donation Area
         height: 100%;
         object-fit: cover;
         object-position: center;
+        transition: transform 0.5s ease;
+    }
+    
+    /* Event overlay for gallery indication */
+    .event-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(26, 104, 91, 0.7);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+    
+    /* Special overlay for upcoming events */
+    .event-overlay.upcoming {
+        background-color: rgba(91, 75, 61, 0.7); /* Using the brown accent color */
+        opacity: 0;
+    }
+    
+    .upcoming-event:hover .event-overlay.upcoming {
+        opacity: 1;
+    }
+    
+    .event-overlay span {
+        color: white;
+        font-size: 18px;
+        font-weight: 600;
+        padding: 10px 20px;
+        border: 2px solid white;
+        border-radius: 30px;
+    }
+    
+    .event-link:hover .event-overlay {
+        opacity: 1;
+    }
+    
+    .event-link:hover .event-img img {
+        transform: scale(1.05);
     }
     
     /* Special styling for the Free Palestine event */
@@ -505,6 +622,51 @@ Donation Area
         color: var(--theme-color);
     }
     
+    /* Gallery styling */
+    .gallery-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 15px;
+        padding: 10px;
+    }
+    
+    .gallery-item {
+        overflow: hidden;
+        border-radius: 8px;
+        box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    }
+    
+    .gallery-item img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+    }
+    
+    .gallery-item:hover img {
+        transform: scale(1.05);
+    }
+    
+    /* Modal styling */
+    .modal-content {
+        border-radius: 15px;
+        overflow: hidden;
+    }
+    
+    .modal-header {
+        background-color: var(--theme-color);
+        color: white;
+        border: none;
+    }
+    
+    .modal-title {
+        font-weight: 600;
+    }
+    
+    .btn-close {
+        filter: brightness(0) invert(1);
+    }
+    
     /* Media queries for better spacing on different screen sizes */
     @media (min-width: 992px) {
         .row.justify-content-center > [class*='col-'] {
@@ -524,6 +686,9 @@ Donation Area
             max-width: 450px;
             margin: 0 auto;
         }
+        .gallery-container {
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        }
     }
     
     @media (max-width: 767px) {
@@ -532,6 +697,12 @@ Donation Area
         }
         .palestine-event .event-img {
             height: 350px;
+        }
+        .gallery-container {
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        }
+        .gallery-item img {
+            height: 150px;
         }
     }
     </style>
